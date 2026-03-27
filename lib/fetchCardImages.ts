@@ -1,7 +1,8 @@
 import { Pokemon } from "@/types/card";
 
 export async function fetchPokemons(): Promise<Pokemon[]> {
-  const pokemonList = await fetch("https://pokeapi.co/api/v2/pokemon?limit=12");
+  const offset = Math.floor(Math.random() * 988);
+  const pokemonList = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=12&offset=${offset}`);
   const pokemonJson = await pokemonList.json();
   const pokemonData = Promise.all(
     pokemonJson.results.map(async (item: { name: string; url: string }) => {

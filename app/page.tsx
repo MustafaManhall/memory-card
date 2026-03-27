@@ -15,11 +15,13 @@ export default function Home() {
     won: false,
     gameOver: false,
   });
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     async function fetchData() {
       const pokData = await fetchPokemons();
       setCardList(pokData);
+      setIsLoading(false);
     }
     fetchData();
   }, []);
@@ -60,7 +62,7 @@ export default function Home() {
         <h1 className="text-4xl text-red-500">Game Over...</h1>
       )}
       <Score bestScore={bestScore} currentScore={score} />
-      <Card cardData={cardsList} handleClick={handleCardClick} />
+      <Card cardData={cardsList} handleClick={handleCardClick} isLoading={isLoading}/>
     </div>
   );
 }

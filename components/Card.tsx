@@ -4,13 +4,15 @@ import Image from "next/image";
 const Card = ({
   cardData,
   handleClick,
+  isLoading,
 }: {
   cardData: Pokemon[];
   handleClick: (id: number) => void;
+  isLoading: boolean;
 }) => {
   return (
-    <div className="grid grid-cols-6 w-full p-4 gap-3 max-lg:grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2">
-      {cardData.map((item: Pokemon) => {
+    <div className={isLoading ? "flex justify-center items-center w-full h-full" :"grid grid-cols-6 w-full p-4 gap-3 max-lg:grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2"}>
+      {isLoading ? <div className="animate-spin border-12 border-[#e2b714] border-t-white w-60 h-60 rounded-full"></div> : cardData.map((item: Pokemon) => {
         return (
           <div
             onClick={() => handleClick(item.id)}
