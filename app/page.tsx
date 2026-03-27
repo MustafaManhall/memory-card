@@ -53,11 +53,11 @@ export default function Home() {
     }
   }
   return (
-    <div className="flex flex-col justify-center items-center h-auto">
-      <h1>Hi, this is Home.</h1>
+    <div className="flex flex-col items-center h-screen">
+      <h1 className="text-5xl text-[#e2b714] p-8" >Memory Card Game</h1>
       {status.won && <h1 className="text-4xl text-green-500">You Won...</h1>}
       {status.gameOver && (
-        <h1 className="text-4xl text-fuchsia-500">Game Over...</h1>
+        <h1 className="text-4xl text-red-500">Game Over...</h1>
       )}
       <Score bestScore={bestScore} currentScore={score} />
       <Card cardData={cardsList} handleClick={handleCardClick} />

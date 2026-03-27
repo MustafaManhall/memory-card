@@ -7,8 +7,8 @@ const Score = ({
 }) => {
   return (
     <>
-      <h1>Current Score : {currentScore}</h1>
-      <h1>Best Score : {bestScore}</h1>
+      <h1 className="text-4xl text-[#e2b714]">Best Score : {bestScore}</h1>
+      <h1 className="text-4xl text-[#e2b714]" >Current Score : {currentScore}</h1>
     </>
   );
 };
