@@ -10,7 +10,7 @@ export async function fetchPokemons(): Promise<Pokemon[]> {
         return {
             id: pokJs.id,
             name: item.name,
-            image: pokJs.sprites.front_default
+            image: pokJs.sprites.other["official-artwork"].front_default
         }
     }),
   );

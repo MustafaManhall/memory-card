@@ -25,8 +25,8 @@ export default function Home() {
             <Image
               src={`${item.image}`}
               alt={"Pokemon Image"}
-              width={100}
-              height={100}
+              width={250}
+              height={250}
               loading="eager"
             />
           </div>
