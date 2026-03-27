@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎮 Memory Card Game
 
-## Getting Started
+A Pokemon-themed memory card game built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🔴 Live Preview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+👉 [Play the game here](https://memory-card-five-pi.vercel.app/)
+
+## ✨ Features
+
+- Fetches 12 random Pokemon from the [PokeAPI](https://pokeapi.co/) on load
+- Cards shuffle after every click to keep you on your toes
+- Tracks your **Current Score** and **Best Score**
+- Game Over when you click the same Pokemon twice
+- Win screen when you click all 12 without repeating
+- Fully responsive layout
+
+## 🛠️ Tech Stack
+
+- [Next.js](https://nextjs.org/) (App Router)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [PokeAPI](https://pokeapi.co/)
+
+## 📁 Project Structure
+
+```
+memory-card/
+├── app/
+│   ├── page.tsx        # Main game logic & state
+│   └── layout.tsx
+├── components/
+│   ├── Card.tsx        # Individual Pokemon card
+│   └── ScoreBoard.tsx  # Score display
+├── lib/
+│   └── fetchCardImages.ts  # PokeAPI fetch logic
+└── types/
+    └── card.ts         # TypeScript interfaces
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+git clone https://github.com/MustafaManhall/memory-card.git
+cd memory-card
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## 📚 What I Learned
 
-To learn more about Next.js, take a look at the following resources:
+- **TypeScript** — writing interfaces, typing props, state, and function return values
+- **Next.js App Router** — project structure, layouts, pages, and client vs server components
+- **Data Fetching** — hitting a real REST API (PokeAPI) and chaining multiple fetch calls with `Promise.all()`
+- **React Hooks** — `useState` for managing game state, `useEffect` for fetching on mount
+- **useEffect dependency array** — controlling when side effects run
+- **JavaScript Set** — using `Set` for O(1) duplicate card detection
+- **Immutability in React** — always creating new arrays/objects instead of mutating state
+- **Tailwind CSS** — utility-first styling, grid layouts, hover effects, and responsive design
+- **Vercel Deployment** — deploying a Next.js app in minutes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👤 Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Mustafa Manhal** — built as part of [The Odin Project](https://www.theodinproject.com/) React curriculum.
