@@ -9,7 +9,7 @@ const Card = ({
   handleClick: (id: number) => void;
 }) => {
   return (
-    <div>
+    <div className="flex flex-wrap">
       {cardData.map((item: Pokemon) => {
         return (
           <div
