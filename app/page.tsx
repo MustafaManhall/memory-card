@@ -54,7 +54,7 @@ export default function Home() {
   }
   return (
     <div className="flex flex-col items-center h-screen">
-      <h1 className="text-5xl text-[#e2b714] p-8" >Memory Card Game</h1>
+      <h1 className="text-5xl max-sm:text-4xl max-[25rem]:text-[1.7rem] text-[#e2b714] p-8" >Memory Card Game</h1>
       {status.won && <h1 className="text-4xl text-green-500">You Won...</h1>}
       {status.gameOver && (
         <h1 className="text-4xl text-red-500">Game Over...</h1>

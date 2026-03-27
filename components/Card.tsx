@@ -9,7 +9,7 @@ const Card = ({
   handleClick: (id: number) => void;
 }) => {
   return (
-    <div className="grid grid-cols-6 w-full p-4 gap-3">
+    <div className="grid grid-cols-6 w-full p-4 gap-3 max-lg:grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2">
       {cardData.map((item: Pokemon) => {
         return (
           <div
@@ -24,7 +24,7 @@ const Card = ({
               height={400}
               loading="eager"
             />
-            <h1 className="text-2xl w-full text-center rounded-b-2xl bg-[#e2b714]" >{item.name}</h1>
+            <h1 className="text-2xl max-md:text-xl max-sm:text-lg w-full text-center rounded-b-2xl bg-[#e2b714]" >{item.name}</h1>
           </div>
         );
       })}
