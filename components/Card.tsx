@@ -14,7 +14,7 @@ const Card = ({
         return (
           <div
             onClick={() => handleClick(item.id)}
-            className="flex flex-col justify-center items-center border border-[#e2b714] rounded-2xl bg-[#1a1a2e] hover:bg-[#16213e] w-full h-full"
+            className="flex flex-col justify-center items-center border border-[#e2b714] rounded-2xl bg-[#1a1a2e] hover:bg-[#16213e] w-full h-full cursor-pointer"
             key={item.id}
           >
             <Image
